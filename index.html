@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>X OAuth</title>
+</head>
+<body>
+    <h1>Verify Your X Account</h1>
+    <p>Click the button below to connect your X account.</p>
+    <a id="connect-link" href="#">Connect to X</a>
+    <script>
+        function setOAuthLink(token) {
+            const link = document.getElementById("connect-link");
+            link.href = `https://api.twitter.com/oauth/authorize?oauth_token=${token}`;
+        }
+    </script>
+</body>
+</html>
